@@ -7,6 +7,8 @@ const db = require('./db')
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
 app.get('/api/users', async (req, res, next) => {
+  res.send([]);
+  /*
   try {
     console.log('yes');
     const users = await db.models.user.findAll()
@@ -17,6 +19,7 @@ app.get('/api/users', async (req, res, next) => {
     console.error(e)
     next(e)
   }
+  */
 })
 
 
