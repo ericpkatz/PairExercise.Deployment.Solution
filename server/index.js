@@ -13,6 +13,7 @@ app.get('/api/users', async (req, res, next) => {
     console.log('no');
     res.json(users)
   } catch (e) {
+    console.log(e);
     console.error(e)
     next(e)
   }
