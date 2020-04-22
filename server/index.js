@@ -8,7 +8,9 @@ app.use(express.static(path.join(__dirname, '..', 'public')))
 
 app.get('/api/users', async (req, res, next) => {
   try {
+    console.log('yes');
     const users = await db.models.user.findAll()
+    console.log('no');
     res.json(users)
   } catch (e) {
     console.error(e)
