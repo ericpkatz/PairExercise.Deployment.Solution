@@ -19,6 +19,7 @@ describe('GET /users', () => {
   it('should return list of users', async () => {
     console.log('in it block');
     const res = await request(app).get('/api/users')
+    console.log('response', res);
     expect(res.status).to.equal(200)
     expect(res.body.length).to.equal(seedUsers.length)
   })
