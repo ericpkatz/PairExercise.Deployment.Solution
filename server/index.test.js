@@ -8,7 +8,7 @@ const seedUsers = require('../script/users.json')
 describe('GET /users', () => {
 
   before(async () => {
-    //await db.sync({ force: true })
+    await db.sync({ force: true })
     /*
     console.log('before each one');
     await db.sync({ force: true })
