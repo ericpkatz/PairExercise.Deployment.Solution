@@ -8,7 +8,9 @@ const seedUsers = require('../script/users.json')
 describe('GET /users', () => {
 
   before(async () => {
+    console.log('before each one');
     await db.sync({ force: true })
+    console.log('before each two');
     await db.models.user.bulkCreate(seedUsers)
   })
 
